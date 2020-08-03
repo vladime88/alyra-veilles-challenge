@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veilles Challenge</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-center">Veilles EtherJs</h1>
+      <p class="text-center display-8" id="intro"></p>
+     
+    </header>
+    <main class="container">
+      <!-- Bouton 'Veilles à venir' à construire-->
+
+       <!--pose du formulaire de tri par date et alphabétique-->
+      <div class="input-group mb-3">
+        <label for="filterdate" class="input-group-text">
+          Trier
+        </label>
+        <select id="filterdate" name="filterdate" class="form-select">
+          <option value="Par date" selected>Par date</option>
+          <option>De A à Z</option
+          ><option>De Z à A</option></select>
+      </div>
+      <div class="input-group mb-3">
+        <label for="filtercategory" class="input-group-text">
+          Catégories
+        </label>
+        <select id="filtercategory" name="filtercategory" class="form-select">
+          <option value="Toutes" selected>Toutes</option>
+        </select>
+      </div>
+    
+    <main>
+      <!--liste des veilles triées-->
+      <div id="grid-container"></div>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    
+    <script src="/js/veilles.js"></script>
+    <!--  <script src="/js/scriptGrid.js"></script>  -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>

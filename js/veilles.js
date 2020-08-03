@@ -1,5 +1,5 @@
 const entries = [
-  { subject: "OpenSource", date: "03/06/2020", category: "WEB" },
+  { subject: "OpenSource", date: "20/06/2020", category: "WEB" },
   { subject: "HTML 5", date: "04/06/2020", category: "DEV WEB" },
   { subject: "Ubuntu", date: "05/06/2020", category: "DEV" },
   {
@@ -84,3 +84,23 @@ const entries = [
   { subject: "Simplicity", date: "28/09/2020", category: "DEV BC" },
   { subject: "Social Blockchain", date: "30/09/2020", category: "Blockchain" }
 ];
+
+function allCategory(list) {
+  /* retourner la liste des tags uniques */
+  let listTotal = [];
+  for (let element of list) {
+    if ("category" in element) {
+      listTotal = listTotal.concat(element.category);
+    }
+  }
+  const listTagsUnique = [];
+  listTotal.forEach(el => {
+    if (!listTagsUnique.includes(el)) {
+      //listTagsUnique = listTagsUnique.concat([el])
+      listTagsUnique.push(el);
+    }
+  });
+  return listTagsUnique;
+}
+
+const uniqueTags = allCategory(entries);
